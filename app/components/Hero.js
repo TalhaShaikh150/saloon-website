@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div className="flex h-[100vh] justify-center flex-col max-w-[400px] min-sm:max-w-[600px] ms-10 min-sm:ms-20 gap-5">
       <h1 className="title text-[#F6526D] text-4xl ms-2">Massage & Beauty</h1>
-      <h1 className="text-4xl min-sm:text-6xl font-bold">
+      <h1 className="text-5xl min-sm:text-6xl font-semibold poppins">
         Experience the Beauty Services
       </h1>
       <p className="text-lg min-sm:text-xl text-zinc-600 w-[100%] font-medium">

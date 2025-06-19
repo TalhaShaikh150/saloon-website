@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 bg-white mt-6`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 bg-white mt-6 flex items-center`}
     >
       <nav className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
@@ -31,14 +31,14 @@ export default function Navbar() {
               alt="Company Logo"
               width={200}
               height={200}
-              className="w-[200px] h-[100px]"
+              className="w-[180px] h-[100px]"
               priority
             />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8 text-xl">
+        <div className="hidden lg:flex items-center space-x-6 text-xl">
           <NavLink href="/" text="Home" />
           <NavLink href="/shop" text="Shop" />
           <NavLink href="/services" text="Services" />
@@ -92,7 +92,7 @@ export default function Navbar() {
             <div className="flex justify-between items-center mb-8">
               <Link href="/" onClick={closeMobileMenu}>
                 <Image
-                  src="/logo.png"
+                  src="https://dictate.webinane.com/wp-content/uploads/2022/03/Dictate-logo-new.svg"
                   alt="Company Logo"
                   width={120}
                   height={40}
@@ -107,7 +107,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-6 justify-center text-center w-full">
               <MobileNavLink href="/" text="Home" onClick={closeMobileMenu} />
               <MobileNavLink
                 href="/shop"
@@ -139,11 +139,11 @@ export default function Navbar() {
                 text="Contact"
                 onClick={closeMobileMenu}
               />
-            </div>
 
-            <button className="mt-8 w-full bg-[#F6526D] text-white py-3 px-8 rounded-full text-lg hover:bg-[#D94760] transition-colors duration-300">
-              Appointment
-            </button>
+              <button className="mt-8 w-[30%] bg-[#F6526D] text-white py-3 px-8 rounded-full text-lg hover:bg-[#D94760] transition-colors duration-300 mx-auto">
+                Appointment
+              </button>
+            </div>
           </div>
         </div>
       </nav>
