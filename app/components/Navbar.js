@@ -20,25 +20,25 @@ export default function Navbar() {
 
   return (
     <header
-      className={`w-full top-0 z-50 transition-all duration-300 bg-white mt-6 flex items-center`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 bg-white mt-6`}
     >
-      <nav className="container mx-auto px-4 flex items-center justify-between">
+      <nav className="mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <Image
               src="https://dictate.webinane.com/wp-content/uploads/2022/03/Dictate-logo-new.svg"
               alt="Company Logo"
-              width={200}
-              height={200}
-              className="w-[180px] h-[100px]"
+              width={0}
+              height={0}
+              className="w-[200px] h-[100px]"
               priority
             />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-6 text-xl">
+        <div className="hidden lg:flex items-center space-x-8 text-xl">
           <NavLink href="/" text="Home" />
           <NavLink href="/shop" text="Shop" />
           <NavLink href="/services" text="Services" />
@@ -84,7 +84,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden inset-0 bg-white z-40 transition-all duration-300 ease-in-out ${
+          className={`lg:hidden fixed inset-0 bg-white z-40 transition-all duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -107,7 +107,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="flex flex-col space-y-6 justify-center text-center w-full">
+            <div className="flex flex-col space-y-6 text-center lg:text-start">
               <MobileNavLink href="/" text="Home" onClick={closeMobileMenu} />
               <MobileNavLink
                 href="/shop"
@@ -139,11 +139,11 @@ export default function Navbar() {
                 text="Contact"
                 onClick={closeMobileMenu}
               />
-
-              <button className="mt-8 w-[30%] bg-[#F6526D] text-white py-3 px-8 rounded-full text-lg hover:bg-[#D94760] transition-colors duration-300 mx-auto">
-                Appointment
-              </button>
             </div>
+
+            <button className="flex mt-8 w-full sm:w-[50%] mx-auto justify-center bg-[#F6526D] text-white py-3 px-8 rounded-full text-lg hover:bg-[#D94760] transition-colors duration-300">
+              Appointment
+            </button>
           </div>
         </div>
       </nav>
